@@ -9,6 +9,9 @@ import ModuleRoutes from "./Kanbas/Modules/routes.js";
 import "dotenv/config";
 import AssignmentRoutes from './Kanbas/Assignment/routes.js';
 import EnrollmentRoutes from './Kanbas/Enrollments/routes.js';
+import mongoose from "mongoose";
+const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING
+mongoose.connect(CONNECTION_STRING);
 const app = express()
 app.use(cors({
     credentials: true,
